@@ -1,0 +1,111 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<main class="content px-4 py-5">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h4>Assets</h4>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card p-0">
+                    <div class="card-body p-0">
+                        <div class="file_upload">
+                            <div class="heading  bg-dark text-white p-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="">
+                                        <h5 class="card-title">
+                                            File Upload
+                                        </h5>
+                                    </div>
+                                    <div class="">
+                                        <a href="{% static 'sample_file/RMCMT.csv' %}" class="btn btn-success">Download Sample File</a>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="file_upload_form my-3 p-3">
+                                <form method="post" enctype="multipart/form-data" action="{% url 'dashboard:assets_upload' %}" >
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Choose CSV File*:</label>
+                                        <input class="form-control" type="file" name="file" id="formFile" required>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-success" type="Submit">Submit</button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="data mt-5">
+                            <div class="heading bg-dark text-white p-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="">
+                                        <h5 class="card-title">
+                                            Datas
+                                        </h5>
+                                    </div>
+                                    <div class="">
+                                        <a href="{% url "dashboard:assets_export" %}" class="btn btn-success">Export Datas</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="datas_table my-3 p-3">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col" colspan="1">Host Name</th>
+                                                <th scope="col" colspan="1">OS</th>
+                                                <th scope="col" colspan="1">OS Version</th>
+                                                <th scope="col">Open CVE Data</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for data in datas %}
+                                            <tr>
+                                                <th scope="row">{{ forloop.counter }}</th>
+                                                <td>{{ data.host_name }}</td>
+                                                <td>{{ data.os }}</td>
+                                                <td>{{ data.software }}</td>
+                                                <td colspan="3">
+                                                    {% if data.open_cve_data %}
+                                                    {% for cve_data in data.open_cve_data %}
+                                                    <div class="json-box">
+                                                        <pre><code>{{ cve_data|safe }}</code></pre>
+                                                    </div>
+                                                    {% endfor %}
+                                                    {% else %}
+                                                    -
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                            {% empty %}
+                                            <tr>
+                                                <td colspan="6">There is no data</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+
+</script>
+
+{% endblock content %}

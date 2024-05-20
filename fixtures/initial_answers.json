@@ -1,0 +1,405 @@
+[
+    {
+        "model": "qa.Answer",
+        "pk": 1,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes",
+            "question":1,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 2,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":1,
+            "is_correct": true,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 3,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Partially complete",
+            "question":1,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 4,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes",
+            "question":2,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 5,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":2,
+            "is_correct": false,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 6,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Partially complete",
+            "question":2,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 7,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes",
+            "question":3,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 8,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":3,
+            "is_correct": false,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 9,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Under development",
+            "question":3,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 10,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes (at least annually)",
+            "question":4,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 11,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":4,
+            "is_correct": false,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 12,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Occasionally",
+            "question":4,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 13,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes (e.g., firewall)",
+            "question":5,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 14,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":5,
+            "is_correct": false,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 15,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Partially implemented",
+            "question":5,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 16,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes",
+            "question":6,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 17,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":6,
+            "is_correct": false,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 18,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Under development",
+            "question":6,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 19,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes",
+            "question":7,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 20,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":7,
+            "is_correct": false,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 21,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Weak password policy exists",
+            "question":7,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 22,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes, for all privileged accounts",
+            "question":8,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 23,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes, for some privileged accounts",
+            "question":8,
+            "is_correct": false,
+            "points":1.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 24,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":8,
+            "is_correct": true,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 25,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Under development",
+            "question":8,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 26,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes",
+            "question":9,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 27,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":9,
+            "is_correct": true,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 28,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Partially implemented",
+            "question":8,
+            "is_correct": true,
+            "points":2.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 29,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Yes, within a specific timeframe",
+            "question":10,
+            "is_correct": false,
+            "points":0.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 30,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "No",
+            "question":10,
+            "is_correct": true,
+            "points":3.0
+        }
+    },
+    {
+        "model": "qa.Answer",
+        "pk": 31,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "ans": "Done sporadically",
+            "question":10,
+            "is_correct": true,
+            "points":2.0
+        }
+    }
+]

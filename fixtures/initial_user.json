@@ -1,0 +1,17 @@
+[{
+	"model": "user.User",
+	"pk": 5,
+	"fields": {
+		"password": "argon2$argon2id$v=19$m=102400,t=2,p=8$QnNMZ25wZ1FOaHlQUkhwOVJiMHhUYw$StUfomBf+9eQ2Zg0i30eRGa3e8+KolQpGjTzETRUmD8",
+		"is_superuser": true,
+		"email": "admin@gmail.com",
+		"is_staff": true,
+		"is_active": true,
+		"is_deleted": false,
+		"first_name": "Admin",
+		"last_name": "Admin",
+        "created_at": "2023-02-09T16:18:27.752Z",
+		"updated_at": "2023-02-09T16:18:27.752Z"
+	}
+}
+]

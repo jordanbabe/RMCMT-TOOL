@@ -1,0 +1,22 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Risk Management and Compliance Mapping Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block static %}{% endblock static %}
+  </head>
+  <body>
+    <div class="mb-4 logo">
+      {% comment %} <img src="" alt="Logo" height=""> {% endcomment %}
+      <h3><a href="{% url "user:user_login" %}"> Risk Management and <br> Compliance Mapping Tool </a> </h3>
+    </div>
+    {% block content %}{% endblock content %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    {% block script %}{% endblock script %}
+  </body>
+</html>

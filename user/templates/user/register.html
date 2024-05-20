@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block static %}
+<style>
+    /* Center the form vertically */
+    .center-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Set the width of the form container */
+    .form-container {
+        max-width: 500px; /* Adjust the width as needed */
+        width: 100%;
+    }
+    .center-form{
+      font-weight:900;
+
+    }
+  </style>
+
+{% endblock static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container center-form">
+        <div class="row">
+          <div class="col">
+            <!-- Logo Section -->
+            
+      
+            <!-- Login Form -->
+            <div class="card form-container shadow-sm login_form shadow-sm p-2 rounded-4">
+              <div class="card-body">
+                <h4 class="card-title text-center">Register</h4>
+                {% if messages %}
+                    <div class="p-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    {% for message in messages %}
+                                    <div class="alert alert-danger">
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    {% comment %} {{ form|crispy }} {% endcomment %}
+
+                    <div class="mb-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {{ form.first_name|as_crispy_field }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.last_name|as_crispy_field }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                    <div class="mb-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {{ form.password1|as_crispy_field }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.password2|as_crispy_field }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                        <button class="btn btn-primary" type="submit">Register</button>
+                    </div>
+                </form>
+                <br>
+                <span>Already have an account <a href=" {% url "user:user_login" %} " >Login</a> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+{% endblock content %}

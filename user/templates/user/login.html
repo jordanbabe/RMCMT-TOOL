@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block static %}
+<style>
+    /* Center the form vertically */
+    .center-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Set the width of the form container */
+    .form-container {
+        max-width: 400px; /* Adjust the width as needed */
+        width: 100%;
+    }
+    .center-form{
+      font-weight:900;
+
+    }
+  </style>
+
+{% endblock static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container center-form">
+        <div class="row">
+          <div class="col">
+            <!-- Logo Section -->
+            
+      
+            <!-- Login Form -->
+            <div class="card form-container shadow-sm login_form shadow-sm p-3 rounded-4">
+              <div class="card-body">
+                <h4 class="card-title text-center">Login</h4>
+                {% if error_message %}
+                    <div class="p-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="alert alert-danger">
+                                        {{ error_message }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                  <div class="d-grid gap-2 mt-4">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                  </div>
+                </form>
+                <br>
+                <span>Don't have an account <a href=" {% url "user:user_register" %} " >Create One ?</a> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+{% endblock content %}

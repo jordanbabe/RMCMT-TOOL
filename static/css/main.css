@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
+body {
+    /* Background color with opacity */
+    background-color: rgba(206, 201, 201, 0.9);
+    /* Background image */
+    background-image: url('../images/bg.jpg');
+    /* Background image size and position */
+    background-size: cover; /* Adjusts the size of the background image to cover the entire container */
+    background-position: center; /* Centers the background image */
+    /* Font styles */
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    backdrop-filter: blur(2px) brightness(40%);
+    position: relative;
+
+}
+
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo a{
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: "Share Tech Mono", monospace;
+}

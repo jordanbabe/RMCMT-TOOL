@@ -1,0 +1,277 @@
+[
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 1,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 1,
+            "color_code": "#98E559"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 2,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 2,
+            "color_code": "#98E559"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 3,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 3,
+            "color_code": "#98E559"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 4,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 4,
+            "color_code": "#98E559"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 5,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 5,
+            "color_code": "#98E559"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 6,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 6,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 7,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 7,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 8,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 8,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 9,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 9,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 10,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 10,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 11,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 11,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 12,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 12,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 13,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 13,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 14,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 14,
+            "color_code": "#EBE81D"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 15,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 15,
+            "color_code": "#F9C425"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 16,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 16,
+            "color_code": "#F9C425"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 17,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 17,
+            "color_code": "#F9C425"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 18,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 18,
+            "color_code": "#F9C425"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 19,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 19,
+            "color_code": "#F9C425"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 20,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 20,
+            "color_code": "#F9C425"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 21,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 21,
+            "color_code": "#EE472A"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 22,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 22,
+            "color_code": "#EE472A"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 23,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 23,
+            "color_code": "#EE472A"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 24,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 24,
+            "color_code": "#EE472A"
+        }
+    },
+    {
+        "model": "dashboard.RiskScale",
+        "pk": 25,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2024-05-09T16:20:57.499Z",
+            "updated_at": "2024-05-09T16:20:57.499Z",
+            "number": 25,
+            "color_code": "#EE472A"
+        }
+    }
+]

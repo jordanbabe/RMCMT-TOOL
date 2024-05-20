@@ -1,0 +1,76 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<main class="content px-4 py-5">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h4>Risk Assessment</h4>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {% if earned_points %}
+
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">You Have Already Attempted Quizes</h5>
+                            
+                            <h6>You have earned points: {{ earned_points }}</h6>
+                        </div>
+                    </div>
+
+                {% else %}
+                    {% if questions_with_answers %}
+                    <form method="post" id="assessment-form" action="{% url 'dashboard:risk_assessment_attempt' %}">
+                        {% csrf_token %}
+                        {% for item in questions_with_answers %}
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ item.question.title }}</h5>
+                                    {% for ans in item.answers %}
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="answers" id="answer{{ ans.id }}" value="{{ ans.id }}" data-question="{{ item.question.id }}">
+                                            <label class="form-check-label" for="answer{{ ans.id }}">
+                                                {{ ans.ans }}
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                    <div class="invalid-feedback" style="display: none;">Please select at least one answer.</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                        <button type="reset" class="btn btn-secondary mt-3 ml-2">Reset</button>
+                    </form>
+                    {% else %}
+                    <h5>There is no any MCQs please visit later....</h5>
+                    {% endif %}
+                    
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+document.getElementById("assessment-form").addEventListener("submit", function(event) {
+    var questions = document.querySelectorAll('[data-question]');
+    var isValid = true;
+    questions.forEach(function(question) {
+        var checkboxes = document.querySelectorAll('[data-question="' + question.dataset.question + '"]:checked');
+        if (checkboxes.length === 0) {
+            isValid = false;
+            // Show the error message for this question
+            question.closest('.card').querySelector('.invalid-feedback').style.display = "block";
+        }
+    });
+    if (!isValid) {
+        // Show alert message
+        // alert("Please select at least one answer for each question.");
+        event.preventDefault();
+    }
+});
+</script>
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<main class="content px-4 py-5">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h4>Dashboard</h4>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <img src="{% static 'images/dash.png' %}" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock content %}

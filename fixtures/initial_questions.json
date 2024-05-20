@@ -1,0 +1,112 @@
+[
+    {
+        "model": "qa.Question",
+        "pk": 1,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a complete and accurate inventory of all hardware assets (including desktops laptops, servers, network devices, etc.) connected to your network?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 2,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a process for identifying and tracking software applications installed on your devices?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 3,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a documented procedure for adding new devices to your network?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 4,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you regularly review and update your asset inventory to ensure accuracy?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 5,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a well-defined network boundary that separates your internal network from the public internet?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 6,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a documented policy for managing and configuring firewalls to restrict unauthorized access to your network?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 7,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a strong password policy that enforces complexity requirements and regular password changes?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 8,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you utilize multi-factor authentication (MFA) for privileged user accounts and access to critical systems?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 9,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you have a defined process for granting and reviewing user access privileges based on the principle of least privilege?"
+        }
+    },
+    {
+        "model": "qa.Question",
+        "pk": 10,
+        "fields": {
+            "is_deleted": false,
+            "created_at": "2023-02-09T16:20:57.499Z",
+            "updated_at": "2023-02-09T16:20:57.499Z",
+            "question_type": 1,
+            "title":"Do you disable or remove user accounts when employees leave the organization?"
+        }
+    }
+]

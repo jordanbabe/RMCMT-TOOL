@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management and Compliance Mapping Tool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/dashboard/main.css' %}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#"> <img src="./image/profile.jpg" alt="" style="height: 20px; width: 20px;"> <span style="color: black;">RMCMT</span></a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="{% url "dashboard:dash" %}" class="sidebar-link {% if title == 'dash' %}active{% endif %}">
+                            <i class="fa-solid fa-square-minus pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="{% url "dashboard:dashboard" %}" class="sidebar-link {% if title == 'dashboard' %}active{% endif %}">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Risk Assessment
+                        </a>
+                    </li>
+                    {% comment %} <li class="sidebar-item side-item">
+                        <a href=" {% url "dashboard:common_threat" %} " class="sidebar-link {% if title == 'common_threat' %}active{% endif %}">
+                            <i class="fa-solid fa-triangle-exclamation pe-2"></i>
+                            Common Threat
+                        </a>
+                    </li> {% endcomment %}
+                    <li class="sidebar-item side-item">
+                        <a href="{% url "dashboard:assets" %}" class="sidebar-link {% if title == 'assets' %}active{% endif %}">
+                            <i class="fa-solid fa-upload pe-2"></i>
+                            Asset
+                        </a>
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="{% url 'dashboard:risk_register' %}" class="sidebar-link {% if title == 'risk_register' %}active{% endif %}">
+                            <i class="fa-solid fa-cash-register"></i>
+                            Risk Register
+                        </a>
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="{% url "dashboard:trainings" %}" class="sidebar-link {% if title == 'trainings' %}active{% endif %}">
+                            <i class="fa-solid fa-chalkboard pe-2"></i>
+                            Trainings
+                        </a>
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="{% url "dashboard:compilance" %}" class="sidebar-link {% if title == 'compilance' %}active{% endif %}">
+                            <i class="fa-solid fa-toolbox pe-2"></i>
+                            Compliance
+                        </a>
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="{% url "dashboard:about" %}" class="sidebar-link {% if title == 'about' %}active{% endif %}">
+                            <i class="fa-solid fa-circle-info pe-2"></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="sidebar-item side-item">
+                        <a href="" class="sidebar-link">
+                            <form action="{% url 'user:user_logout' %}" method="POST">
+                                {% csrf_token %}
+                                <div class="sidebar-link">
+                                    <button type="submit" class="btn_logout"><i class="fa-solid fa-right-from-bracket pe-2"></i> Logout</button>
+                                </div>
+                            </form>
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-4 border-bottom bg-white">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <img src="{% static 'images/body_bg.jpg' %}" class="avatar img-fluid rounded-circle" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            {% if messages %}
+                <div class="p-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                {% for message in messages %}
+                                <div class="alert alert-danger">
+                                    {{ message }}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            
+            
+            {% block content %}
+            
+            {% endblock content %}
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sidebarToggle = document.querySelector("#sidebar-toggle");
+        sidebarToggle.addEventListener("click",function(){
+            document.querySelector("#sidebar").classList.toggle("collapsed");
+        });
+
+
+
+        const sidebarList = document.querySelectorAll(".side-item a")
+
+        sidebarList.forEach((list) => {
+            list.addEventListener("click", () => {
+                sidebarList.forEach((list) => {
+                    list.classList.remove("active")
+                })
+            list.classList.add("active")
+
+            })
+        })
+    </script>
+</body>
+
+</html>

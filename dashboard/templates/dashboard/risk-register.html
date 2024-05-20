@@ -1,0 +1,342 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<main class="content px-4 py-5">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h4>Risk Register</h4>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card p-0">
+                    <div class="card-body p-0">
+                        <div class="file_upload">
+                            <div class="heading  bg-dark text-white p-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="">
+                                        <h5 class="card-title">
+                                            Risk Register
+                                        </h5>
+                                    </div>
+                                    <div class="">
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="file_upload_form my-3 p-3">
+                                <form method="post" action="{% url 'dashboard:risk_register_create' %}" >
+                                    {% csrf_token %}
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col-lg-9 border-end">
+                                                <div class="row">
+                                                    <div class="col-lg-6 ">
+                                                        <div class="mb-3">
+                                                            <label for="riskDesc" class="form-label">RISK DESCRIPTION</label>
+                                                            <input type="text" name="riskDesc" class="form-control" id="riskDesc" aria-describedby="riskDescHelp" required>
+                                                            <div id="riskDescHelp" class="form-text">Give a brief summary of the risk.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="impactDesc" class="form-label">IMPACT DESCRIPTION</label>
+                                                            <input type="text" name="impactDesc" class="form-control" id="impactDesc" aria-describedby="impactDesccHelp" required>
+                                                            <div id="impactDesccHelp" class="form-text">What will happen if the risk is not mitigated or eliminated?.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="impactLevel" class="form-label">IMPACT LEVEL</label>
+                                                            <select class="form-select" name="impactLevel" aria-label="Default select example" aria-describedby="impactLevelHelp" id="impactLevel" required>
+                                                                <option>Open this select menu</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                              </select>
+                                                              
+                                                            <div id="impactLevelHelp" class="form-text">Rate 
+                                                                1 (LOW) to 
+                                                                5 (HIGH).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="probalityLevel" class="form-label">PROBABILITY LEVEL</label>
+                                                            <select class="form-select" name="probalityLevel" aria-label="Default select example" aria-describedby="probalityLevelHelp" id="probalityLevel" required>
+                                                                <option>Open this select menu</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                              </select>
+                                                              
+                                                            <div id="probalityLevelHelp" class="form-text">Rate 
+                                                                1 (LOW) to 
+                                                                5 (HIGH).
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="migrationsNotes" class="form-label">MITIGATION NOTES
+                                                            </label>
+                                                            <input type="text" name="migrationsNotes" class="form-control" id="migrationsNotes" aria-describedby="migrationsNotesHelp" required>
+                                                            <div id="migrationsNotesHelp" class="form-text">What can be done to lower or eliminate the impact or probability?</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label for="owner" class="form-label">OWNER</label>
+                                                            <input type="text" name="owner" class="form-control" id="owner" aria-describedby="ownerHelp" required>
+                                                            <div id="ownerHelp" class="form-text">Who's responsible?
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="title">
+                                                    <h3>RISK REGISTER SCALE</h3>
+                                                </div>
+                                                <div class="image">
+                                                    <img class="img-fluid" src="{% static 'images/risk_register_scale.png' %}" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-success" type="Submit">Submit</button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="data mt-5">
+                            <div class="heading bg-dark text-white p-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="">
+                                        <h5 class="card-title">
+                                            Datas
+                                        </h5>
+                                    </div>
+                                    <div class="">
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="datas_table my-3 p-3">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">RISK DESCRIPTION</th>
+                                            <th scope="col">IMPACT DESCRIPTION</th>
+                                            <th scope="col">IMPACT LEVEL</th>
+                                            <th scope="col">PROBABILITY LEVEL</th>
+                                            <th scope="col">PRIORITY LEVEL</th>
+                                            <th scope="col">MITIGATION NOTES</th>
+                                            <th scope="col">OWNER</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for risk_register in risk_registers %}
+                                                <tr>
+                                                    <th scope="row">{{ forloop.counter }}</th>
+                                                    <td>
+                                                        {{ risk_register.risk_description }}
+                                                    </td>
+                                                    <td>{{ risk_register.impact_description }}</td>
+                                                    <td> {{ risk_register.impact_level }} </td>
+                                                    <td> {{ risk_register.probability_level }} </td>
+                                                    <td style="background-color: {{ risk_register.color_code }};">{{ risk_register.priority_level }}</td>
+                                                    <td>{{ risk_register.migrations_notes }}.</td>
+                                                    <td>{{ risk_register.owner }}</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#riskModal{{ risk_register.id }}"></i>
+                                                                </a>
+                                                                
+                                                            </div>
+                                                            <div>
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-trash" data-bs-toggle="modal" data-bs-target="#riskModal{{ risk_register.id }}delete"></i>
+                                                                </a>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% for risk_register in risk_registers %}
+    <!-- Modal -->
+    <div class="modal fade" id="riskModal{{ risk_register.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog update-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Update Risk Register</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3">
+                <form method="post" action="{% url 'dashboard:risk_register_update' risk_register.id %}" >
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <div class="row">
+                            <div class="col-lg-9 border-end">
+                                <div class="row">
+                                    <div class="col-lg-6 ">
+                                        <div class="mb-3">
+                                            <label for="riskDesc" class="form-label">RISK DESCRIPTION</label>
+                                            <input type="text" name="riskDesc" class="form-control" value="{{ risk_register.risk_description }}" id="riskDesc" aria-describedby="riskDescHelp" required>
+                                            <div id="riskDescHelp" class="form-text">Give a brief summary of the risk.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="impactDesc" class="form-label">IMPACT DESCRIPTION</label>
+                                            <input type="text" name="impactDesc" class="form-control" id="impactDesc" value="{{ risk_register.impact_description }}" aria-describedby="impactDesccHelp" required>
+                                            <div id="impactDesccHelp" class="form-text">What will happen if the risk is not mitigated or eliminated?.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="impactLevel" class="form-label">IMPACT LEVEL</label>
+                                            <select class="form-select" name="impactLevel" aria-label="Default select example" aria-describedby="impactLevelHelp" id="impactLevel" required>
+                                                <option>{{ risk_register.impact_level }}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                              </select>
+                                              
+                                            <div id="impactLevelHelp" class="form-text">Rate 
+                                                1 (LOW) to 
+                                                5 (HIGH).
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="probalityLevel" class="form-label">PROBABILITY LEVEL</label>
+                                            <select class="form-select" name="probalityLevel" aria-label="Default select example" aria-describedby="probalityLevelHelp" id="probalityLevel" required>
+                                                <option>{{ risk_register.probability_level }}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                              </select>
+                                              
+                                            <div id="probalityLevelHelp" class="form-text">Rate 
+                                                1 (LOW) to 
+                                                5 (HIGH).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="migrationsNotes" class="form-label">MITIGATION NOTES
+                                            </label>
+                                            <input type="text" name="migrationsNotes" value="{{ risk_register.migrations_notes }}" class="form-control" id="migrationsNotes" aria-describedby="migrationsNotesHelp" required>
+                                            <div id="migrationsNotesHelp" class="form-text">What can be done to lower or eliminate the impact or probability?</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            <label for="owner" class="form-label">OWNER</label>
+                                            <input type="text" value="{{ risk_register.owner }}" name="owner" class="form-control" id="owner" aria-describedby="ownerHelp" required>
+                                            <div id="ownerHelp" class="form-text">Who's responsible?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="title">
+                                    <h3>RISK REGISTER SCALE</h3>
+                                </div>
+                                <div class="image">
+                                    <img class="img-fluid" src="{% static 'images/risk_register_scale.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success" type="Submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+
+{% for risk_register in risk_registers %}
+    <!-- Modal -->
+    <div class="modal fade" id="riskModal{{ risk_register.id }}delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Risk Register</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3">
+                <p class="mb-4">Are you sure you want to delete this risk: {{ risk_register.risk_description }}?</p>
+               <form action="{% url 'dashboard:risk_register_delete' risk_register.id %}" method="post">
+                {% csrf_token %}
+                    <button class="btn btn-danger" type="Submit">Confirm</button>
+               </form>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endfor %}
+  
+
+
+<script>
+
+</script>
+
+{% endblock content %}
