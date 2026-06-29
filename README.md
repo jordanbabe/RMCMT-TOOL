@@ -108,3 +108,10 @@ This is a Django project with instructions on how to set it up and run it locall
     ```bash
     sudo docker compose run --rm django python manage.py createsuperuser
     ```
+
+7. Web Portal
+
+<img width="1856" height="915" alt="complaince qa" src="https://github.com/user-attachments/assets/f63dcc43-29ad-4edb-a51a-cd7eb7e35ad1" />
+<img width="1851" height="665" alt="risk assement marking" src="https://github.com/user-attachments/assets/12d99723-82a8-4042-a1e0-3e64d2ad4852" />
+<img width="1873" height="997" alt="web app login portal" src="https://github.com/user-attachments/assets/6256e760-40c5-4e52-82b6-52e0a6436f73" />
+<img width="1879" height="874" alt="risk register submit new risk" src="https://github.com/user-attachments/assets/1aafea7e-2329-475f-9772-6aa8fafc5b4f" />
